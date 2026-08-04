@@ -251,6 +251,7 @@ body {
 
 .hero__title span {
   display: block;
+  margin-top: 0.35em;
   color: var(--text-accent);
   font-weight: var(--fw-medium);
 }
@@ -714,11 +715,18 @@ body {
   }
 
   .section {
+    /* right padding ต้องกว้างพอให้เนื้อหาไม่ชน spatial-nav dots
+       (dots อยู่ right:0.85rem + 8px width ≈ 1.35rem จากขอบขวา) */
     padding:
       calc(3.5rem + env(safe-area-inset-top))
-      calc(1.25rem + env(safe-area-inset-right))
+      calc(2.5rem + env(safe-area-inset-right))
       calc(5.5rem + env(safe-area-inset-bottom))
-      calc(1.25rem + env(safe-area-inset-left));
+      calc(1.5rem + env(safe-area-inset-left));
+  }
+
+  /* หน้าหลักธรรมบนจอเล็ก: ดัน padding-top ลงเพื่อให้ apply-card ขึ้นสูงกว่าเดิม */
+  .section:has(.apply-card) {
+    padding-top: calc(1.75rem + env(safe-area-inset-top));
   }
 
   .apply-card {
@@ -727,6 +735,10 @@ body {
 
   .guidance-line {
     bottom: 1.5rem;
+  }
+
+  .credits__list {
+    max-width: 20rem;
   }
 
   .credits__person {

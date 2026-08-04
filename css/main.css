@@ -724,13 +724,32 @@ body {
       calc(1.5rem + env(safe-area-inset-left));
   }
 
-  /* หน้าหลักธรรมบนจอเล็ก: ดัน padding-top ลงเพื่อให้ apply-card ขึ้นสูงกว่าเดิม */
+  /* หน้าหลักธรรมบนจอเล็ก: ดัน padding-top ลงและเพิ่ม padding-bottom
+     ให้พ้น pager, พร้อมกระชับ spacing ภายในให้บล็อกทั้งหมดพอดีจอ */
   .section:has(.apply-card) {
-    padding-top: calc(1.75rem + env(safe-area-inset-top));
+    padding-top: calc(1.5rem + env(safe-area-inset-top));
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
+  }
+
+  .section:has(.apply-card) .principle__number {
+    margin-bottom: 0.5rem;
+  }
+
+  .section:has(.apply-card) .principle__meaning {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section:has(.apply-card) .principle__body {
+    margin-bottom: var(--space-md);
   }
 
   .apply-card {
-    padding: var(--space-md);
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .apply-card__list {
+    margin-top: var(--space-sm);
+    gap: 0.5rem;
   }
 
   .guidance-line {

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="สัปปุริสธรรม 7 ประการ — สื่อการเรียนรู้สำหรับครู เพื่อเข้าใจและนำไปใช้ในวิชาชีพ" />
+  <title>สัปปุริสธรรม 7 ประการ | สำหรับครู</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Ambient depth -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__orb ambient__orb--1" data-parallax="0.15"></div>
+    <div class="ambient__orb ambient__orb--2" data-parallax="0.08"></div>
+    <div class="ambient__orb ambient__orb--3" data-parallax="0.22"></div>
+  </div>
+
+  <!-- Top progress -->
+  <div class="progress" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+  <!-- Spatial navigation dots -->
+  <nav class="spatial-nav" aria-label="นำทางหลัก">
+    <button class="spatial-nav__dot is-active" data-target="hero" data-label="เริ่มต้น" aria-label="เริ่มต้น"></button>
+    <button class="spatial-nav__dot" data-target="intro" data-label="ภาพรวม" aria-label="ภาพรวม"></button>
+    <button class="spatial-nav__dot" data-target="p1" data-label="ธัมมัญญุตา" aria-label="ธัมมัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="p2" data-label="อัตถัญญุตา" aria-label="อัตถัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="p3" data-label="อัตตัญญุตา" aria-label="อัตตัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="p4" data-label="มัตตัญญุตา" aria-label="มัตตัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="p5" data-label="กาลัญญุตา" aria-label="กาลัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="p6" data-label="ปริสัญญุตา" aria-label="ปริสัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="p7" data-label="ปุคคลัญญุตา" aria-label="ปุคคลัญญุตา"></button>
+    <button class="spatial-nav__dot" data-target="closing" data-label="สรุป" aria-label="สรุป"></button>
+  </nav>
+
+  <!-- Guidance light -->
+  <div class="guidance-line" id="guidance">
+    <span class="guidance-line__text">เลื่อนลงเพื่อเริ่มเดินทาง</span>
+    <div class="guidance-line__bar"></div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="section hero" id="hero" data-section>
+    <div class="section__inner">
+      <p class="hero__eyebrow">สื่อการเรียนรู้สำหรับครู</p>
+      <h1 class="hero__title">
+        สัปปุริสธรรม
+        <span>7 ประการ</span>
+      </h1>
+      <p class="hero__lead">
+        คุณธรรมของสัปปุริส — คนดี คนที่รู้จักธรรมและรู้จักชีวิต<br>
+        หลัก 7 ข้อนี้จะช่วยให้ครูเข้าใจตัวเอง เข้าใจผู้เรียน และสร้างห้องเรียนที่เปี่ยมด้วยปัญญา
+      </p>
+      <a href="#intro" class="hero__cta" id="startBtn">
+        เริ่มต้นการเดินทาง
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== INTRO ========== -->
+  <section class="section intro" id="intro" data-section>
+    <div class="section__inner">
+      <div class="principle reveal">
+        <h2 class="intro__title">สัปปุริสธรรม คืออะไร?</h2>
+        <p class="intro__text">
+          เป็นคุณธรรม 7 ประการของ “สัปปุริส” หรือคนดี ที่พระพุทธเจ้าทรงแสดงไว้
+          ไม่ใช่เพียงทฤษฎี แต่เป็นแนวทางปฏิบัติที่ทำให้เราเข้าใจเหตุ ผล ตัวเอง
+          เวลา สังคม และบุคคลรอบตัวอย่างลึกซึ้ง<br><br>
+          เมื่อครูนำหลักเหล่านี้มาใช้ ห้องเรียนจะกลายเป็นพื้นที่แห่งการเติบโต
+          ทั้งของผู้เรียนและตัวครูเอง
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 1. ธัมมัญญุตา ========== -->
+  <section class="section" id="p1" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">01</div>
+        <h2 class="principle__name"><strong>ธัมมัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักเหตุ · รู้จักธรรม</p>
+        <p class="principle__body">
+          เข้าใจหลักความจริง หลักการ และกฎแห่งเหตุผล
+          รู้ว่าสิ่งใดเป็นเหตุแห่งผลดีหรือผลชั่ว
+          และสามารถแยกแยะได้ว่าอะไรควรทำ อะไรไม่ควรทำตามหลักแห่งธรรม
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักเหตุจะออกแบบการเรียนรู้จาก “ทำไม” ก่อน “อะไร”
+            และสามารถอธิบายเหตุผลให้ผู้เรียนเข้าใจอย่างลึกซึ้ง
+          </p>
+          <ul class="apply-card__list">
+            <li>วางแผนบทเรียนโดยเชื่อมโยงกับเหตุผลและหลักการจริงในชีวิต</li>
+            <li>สอนให้ผู้เรียนตั้งคำถาม “ทำไม” แทนการท่องจำเพียงอย่างเดียว</li>
+            <li>ใช้เหตุผลในการตัดสินใจทางวินัย แทนการใช้อำนาจล้วนๆ</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 2. อัตถัญญุตา ========== -->
+  <section class="section" id="p2" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">02</div>
+        <h2 class="principle__name"><strong>อัตถัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักผล · รู้จักประโยชน์</p>
+        <p class="principle__body">
+          เข้าใจความมุ่งหมายและประโยชน์ที่จะได้รับจากการกระทำ
+          รู้ว่าสิ่งที่ทำไปนั้นจะนำไปสู่ผลอะไร
+          และสามารถเลือกทางที่เกิดประโยชน์ทั้งต่อตนเองและผู้อื่น
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักผลจะมองเห็น “จุดหมาย” ของการเรียนรู้ชัดเจน
+            และช่วยให้ผู้เรียนเข้าใจว่าสิ่งที่เรียนมีคุณค่าอย่างไรในชีวิตจริง
+          </p>
+          <ul class="apply-card__list">
+            <li>กำหนดจุดประสงค์การเรียนรู้ที่เชื่อมโยงกับชีวิตผู้เรียน</li>
+            <li>สะท้อนให้เห็นประโยชน์ของความรู้ ไม่ใช่เพียงเพื่อสอบ</li>
+            <li>ประเมินผลจากพัฒนาการและการนำไปใช้จริง</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 3. อัตตัญญุตา ========== -->
+  <section class="section" id="p3" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">03</div>
+        <h2 class="principle__name"><strong>อัตตัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักตน</p>
+        <p class="principle__body">
+          รู้สถานะ ฐานะ ความรู้ ความสามารถ และคุณธรรมของตนเอง
+          เพื่อประพฤติตนให้เหมาะสม ไม่หลงตัวเองและไม่ดูถูกตัวเอง
+          รู้จุดแข็งและจุดที่ต้องพัฒนาอย่างตรงไปตรงมา
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักตนจะไม่เปรียบเทียบตัวเองกับผู้อื่นอย่างไม่สร้างสรรค์
+            และสามารถเป็นแบบอย่างที่จริงใจให้กับผู้เรียน
+          </p>
+          <ul class="apply-card__list">
+            <li>สะท้อนตนเองอย่างสม่ำเสมอหลังสอนหรือหลังจัดการชั้นเรียน</li>
+            <li>ยอมรับข้อจำกัดและขอความช่วยเหลือเมื่อจำเป็น</li>
+            <li>พัฒนาตนเองอย่างต่อเนื่องตามจุดอ่อนที่รู้จริง</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 4. มัตตัญญุตา ========== -->
+  <section class="section" id="p4" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">04</div>
+        <h2 class="principle__name"><strong>มัตตัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักประมาณ · ความพอดี</p>
+        <p class="principle__body">
+          รู้จักความพอดีในการกิน การใช้จ่าย การพูด การทำงาน
+          และในทุกสิ่งที่ทำ ไม่มากเกินไปจนเกิดโทษ
+          และไม่น้อยเกินไปจนไม่เกิดประโยชน์
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักประมาณจะไม่ผลักดันผู้เรียนเกินกำลัง
+            และรู้จักดูแลสมดุลระหว่างงานสอน งานเอกสาร และชีวิตส่วนตัว
+          </p>
+          <ul class="apply-card__list">
+            <li>มอบหมายงานและกิจกรรมให้เหมาะกับวัยและความพร้อม</li>
+            <li>พูดและให้ feedback ในปริมาณที่พอดี ไม่ท่วมท้น</li>
+            <li>ดูแลตัวเองไม่ให้ burnout เพื่อจะได้ดูแลผู้เรียนได้อย่างยั่งยืน</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 5. กาลัญญุตา ========== -->
+  <section class="section" id="p5" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">05</div>
+        <h2 class="principle__name"><strong>กาลัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักกาล · รู้เวลาที่เหมาะสม</p>
+        <p class="principle__body">
+          รู้เวลาที่เหมาะสมในการทำกิจต่างๆ
+          รู้จังหวะในการพูด การสอน การตักเตือน
+          และการเข้าหาผู้อื่น ไม่ทำสิ่งใดในเวลาที่ไม่ควร
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักกาลจะเลือกจังหวะสอนและให้คำแนะนำได้อย่างลงตัว
+            ทำให้ผู้เรียนพร้อมรับและเกิดการเปลี่ยนแปลงจริง
+          </p>
+          <ul class="apply-card__list">
+            <li>เลือกเวลาที่เหมาะสมในการให้ feedback โดยเฉพาะเรื่องอ่อนไหว</li>
+            <li>ปรับจังหวะการสอนตามสมาธิและความพร้อมของชั้นเรียน</li>
+            <li>รู้จักพักและให้เวลาผู้เรียนได้คิดก่อนตอบ</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 6. ปริสัญญุตา ========== -->
+  <section class="section" id="p6" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">06</div>
+        <h2 class="principle__name"><strong>ปริสัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักชุมชน · รู้จักบริษัท</p>
+        <p class="principle__body">
+          เข้าใจวัฒนธรรม การวางตัว และมารยาทเมื่ออยู่ในสังคมหรือที่ประชุมต่างๆ
+          รู้ว่าในแต่ละกลุ่มคนควรประพฤติตนอย่างไร
+          เพื่อให้เกิดความกลมกลืนและเกิดประโยชน์ร่วมกัน
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักชุมชนจะสร้างบรรยากาศห้องเรียนที่ทุกคนรู้สึกเป็นส่วนหนึ่ง
+            และสามารถทำงานร่วมกับผู้ปกครองและเพื่อนร่วมงานได้อย่างราบรื่น
+          </p>
+          <ul class="apply-card__list">
+            <li>สร้างวัฒนธรรมชั้นเรียนที่ชัดเจน อบอุ่น และเคารพซึ่งกันและกัน</li>
+            <li>ปรับการสื่อสารให้เหมาะกับบริบท (ห้องเรียน / ประชุม / ผู้ปกครอง)</li>
+            <li>เป็นสะพานเชื่อมระหว่างโรงเรียน บ้าน และชุมชน</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 7. ปุคคลัญญุตา ========== -->
+  <section class="section" id="p7" data-section>
+    <div class="section__inner">
+      <article class="principle reveal">
+        <div class="principle__number">07</div>
+        <h2 class="principle__name"><strong>ปุคคลัญญุตา</strong></h2>
+        <p class="principle__meaning">รู้จักบุคคล</p>
+        <p class="principle__body">
+          เข้าใจอัธยาศัย ความแตกต่าง และความประพฤติของแต่ละคน
+          เพื่อการคบหาและการทำงานร่วมกันได้อย่างดี
+          รู้ว่าใครควรได้รับการสนับสนุนอย่างไร และใครควรได้รับการตักเตือนอย่างไร
+        </p>
+        <div class="apply-card">
+          <div class="apply-card__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            สำหรับครู
+          </div>
+          <p class="apply-card__text">
+            ครูที่รู้จักบุคคลจะเห็นผู้เรียนเป็น “คน” ไม่ใช่เพียง “คะแนน”
+            และสามารถดูแลแต่ละคนได้อย่างเหมาะสมตามธรรมชาติของเขา
+          </p>
+          <ul class="apply-card__list">
+            <li>สังเกตและเข้าใจความแตกต่างของผู้เรียนแต่ละคนอย่างลึกซึ้ง</li>
+            <li>ปรับวิธีการสอนและแรงจูงใจให้เหมาะกับลักษณะของแต่ละคน</li>
+            <li>สร้างความสัมพันธ์ที่จริงใจและเคารพศักดิ์ศรีของทุกคน</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== CLOSING ========== -->
+  <section class="section closing" id="closing" data-section>
+    <div class="section__inner">
+      <div class="principle reveal">
+        <h2 class="closing__title">เดินไปด้วยกัน</h2>
+        <p class="closing__text">
+          สัปปุริสธรรมทั้ง 7 ไม่ใช่จุดหมายที่ต้องไปถึงในวันเดียว
+          แต่เป็นเข็มทิศที่ครูสามารถใช้พาตัวเองและผู้เรียน
+          ก้าวไปทีละก้าวอย่างมีสติและมีใจ
+        </p>
+        <p class="closing__quote">
+          “ครูที่ดีไม่ใช่ผู้ที่รู้ทุกอย่าง<br>
+          แต่เป็นผู้ที่รู้จักธรรม รู้จักตน<br>
+          และรู้จักหัวใจของผู้เรียน”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>สัปปุริสธรรม 7 ประการ · สื่อการเรียนรู้สำหรับครู · สร้างด้วยใจ</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

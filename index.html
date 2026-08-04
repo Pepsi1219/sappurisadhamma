@@ -32,12 +32,25 @@
     <button class="spatial-nav__dot" data-target="p6" data-label="ปริสัญญุตา" aria-label="ปริสัญญุตา"></button>
     <button class="spatial-nav__dot" data-target="p7" data-label="ปุคคลัญญุตา" aria-label="ปุคคลัญญุตา"></button>
     <button class="spatial-nav__dot" data-target="closing" data-label="สรุป" aria-label="สรุป"></button>
+    <button class="spatial-nav__dot" data-target="credits" data-label="ผู้จัดทำ" aria-label="ผู้จัดทำ"></button>
   </nav>
 
   <!-- Guidance light -->
   <div class="guidance-line" id="guidance">
     <span class="guidance-line__text">เลื่อนลงเพื่อเริ่มเดินทาง</span>
     <div class="guidance-line__bar"></div>
+  </div>
+
+  <!-- Section pager (prev / next) — fixed, always reachable -->
+  <div class="pager" id="pager" aria-label="นำทางระหว่างบท">
+    <button class="pager__btn pager__prev" id="pagerPrev" type="button" aria-label="ย้อนกลับ">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M5 12l6-6M5 12l6 6"/></svg>
+      <span class="pager__label">ย้อนกลับ</span>
+    </button>
+    <button class="pager__btn pager__next" id="pagerNext" type="button" aria-label="ถัดไป">
+      <span class="pager__label" id="pagerNextLabel">ถัดไป</span>
+      <span class="pager__icon" id="pagerNextIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M19 12l-6-6M19 12l-6 6"/></svg></span>
+    </button>
   </div>
 
   <!-- ========== HERO ========== -->
@@ -309,6 +322,33 @@
           แต่เป็นผู้ที่รู้จักธรรม รู้จักตน<br>
           และรู้จักหัวใจของผู้เรียน”
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CREDITS ========== -->
+  <section class="section credits" id="credits" data-section>
+    <div class="section__inner">
+      <div class="principle reveal">
+        <h2 class="credits__title">ผู้จัดทำ</h2>
+        <p class="credits__subtitle">สื่อการเรียนรู้ · สัปปุริสธรรม 7 ประการ</p>
+        <ul class="credits__list">
+          <li class="credits__person">
+            <span class="credits__number">01</span>
+            <span class="credits__name">นางสาว ธิภาพร ศรีสมบูรณ์</span>
+            <span class="credits__id">เลขที่ 5</span>
+          </li>
+          <li class="credits__person">
+            <span class="credits__number">02</span>
+            <span class="credits__name">นายธีรวัฒน์ แถมพยัค</span>
+            <span class="credits__id">เลขที่ 14</span>
+          </li>
+          <li class="credits__person">
+            <span class="credits__number">03</span>
+            <span class="credits__name">นางสาวกนกวรรณ หม่องสนธิ</span>
+            <span class="credits__id">เลขที่ 17</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>

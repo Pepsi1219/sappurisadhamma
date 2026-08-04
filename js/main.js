@@ -52,23 +52,29 @@
     }
   }
 
-  // ---------- Active section + dots ----------
+  // ---------- Active section + dots + pager ----------
+  let activeIndex = -1;
+
   function updateActiveSection() {
     const mid = window.scrollY + window.innerHeight * 0.4;
-    let currentId = 'hero';
+    let idx = 0;
 
-    sections.forEach(sec => {
+    sections.forEach((sec, i) => {
       const top = sec.offsetTop;
       const bottom = top + sec.offsetHeight;
       if (mid >= top && mid < bottom) {
-        currentId = sec.id;
+        idx = i;
       }
     });
 
+    if (idx === activeIndex) return;
+    activeIndex = idx;
+
+    const currentId = sections[idx].id;
     dots.forEach(dot => {
-      const isActive = dot.dataset.target === currentId;
-      dot.classList.toggle('is-active', isActive);
+      dot.classList.toggle('is-active', dot.dataset.target === currentId);
     });
+    updatePager(idx, currentId);
   }
 
   // ---------- Reveal on scroll ----------
@@ -135,8 +141,66 @@
     });
   }
 
-  // ---------- Soft snap (optional gentle assist) ----------
-  // We keep native smooth scroll; no hard scroll-jacking for better feel & a11y
+  // ---------- Fixed pager (prev / next / back-to-start) ----------
+  const pager = document.getElementById('pager');
+  const pagerPrev = document.getElementById('pagerPrev');
+  const pagerNext = document.getElementById('pagerNext');
+  const pagerNextLabel = document.getElementById('pagerNextLabel');
+  const pagerNextIcon = document.getElementById('pagerNextIcon');
+
+  const arrowRightSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M19 12l-6-6M19 12l-6 6"/></svg>';
+  const homeSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M9 21V12h6v9"/></svg>';
+
+  function goToIndex(i) {
+    const clamped = Math.max(0, Math.min(sections.length - 1, i));
+    const target = sections[clamped];
+    if (target) window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+  }
+
+  // Reflect current section into the pager (called only when index changes)
+  function updatePager(index, id) {
+    if (id === 'hero') {
+      pager.classList.remove('is-visible');
+      return;
+    }
+    pager.classList.add('is-visible');
+
+    // prev is always usable (goes toward hero); dim it at the very first step
+    pagerPrev.dataset.edge = index <= 1 ? 'start' : '';
+
+    const isLast = index === sections.length - 1;
+    if (isLast && !pagerNext.classList.contains('is-home')) {
+      pagerNext.classList.add('is-home');
+      pagerNext.setAttribute('aria-label', 'กลับไปหน้าแรก');
+      pagerNextLabel.textContent = 'หน้าแรก';
+      pagerNextIcon.innerHTML = homeSvg;
+    } else if (!isLast && pagerNext.classList.contains('is-home')) {
+      pagerNext.classList.remove('is-home');
+      pagerNext.setAttribute('aria-label', 'ถัดไป');
+      pagerNextLabel.textContent = 'ถัดไป';
+      pagerNextIcon.innerHTML = arrowRightSvg;
+    }
+  }
+
+  pagerPrev.addEventListener('click', () => goToIndex(activeIndex - 1));
+  pagerNext.addEventListener('click', () => {
+    if (activeIndex >= sections.length - 1) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      goToIndex(activeIndex + 1);
+    }
+  });
+
+  // Keyboard navigation for presentation use (← / →)
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+      e.preventDefault();
+      goToIndex(activeIndex + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault();
+      goToIndex(activeIndex - 1);
+    }
+  });
 
   // ---------- Init ----------
   window.addEventListener('scroll', onScroll, { passive: true });
